@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-// import Card from "./components/Card";
 
-const OPENAI_API_KEY = "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"; // Replace with your actual API key
+const OPENAI_API_KEY = import.meta.env.VITE_SOME_KEY;
+console.log(import.meta.env.VITE_SOME_KEY);
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -56,7 +56,7 @@ function App() {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer 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`,
+          Authorization: `Bearer ${OPENAI_API_KEY}`,
         },
       }
     );
