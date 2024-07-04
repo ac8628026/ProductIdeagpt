@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const OPENAI_API_KEY = import.meta.env.VITE_SOME_KEY;
-console.log(import.meta.env.VITE_SOME_KEY);
+
 
 function App() {
   const [prompt, setPrompt] = useState("");
